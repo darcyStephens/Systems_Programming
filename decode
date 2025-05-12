@@ -1,0 +1,9 @@
+#!/bin/bash
+#passing in argument
+file=$1
+for ((j=1; j<=25; j++)); do
+#running the caesar file passing in args
+    translated_upper=$(./caesar -k "$j" -u < $file )
+    echo "Shift $j"
+    echo "$translated_upper"
+done
